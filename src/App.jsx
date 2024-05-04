@@ -1,13 +1,32 @@
+import { useState } from "react";
 import "./App.scss";
 
 function App() {
+    const [counterValue, setCounterValue] = useState(0);
+
+    const minusClickHandler = () => {
+        setCounterValue((state) => {
+            return state - 1;
+        });
+    };
+
+    const addClickHandler = () => {
+        setCounterValue((state) => {
+            return state + 1;
+        });
+    };
+
+    const resetClickHandler = () => {
+        setCounterValue(0);
+    };
+
     return (
         <div>
-            <div>0</div>
-            <button>-</button>
-            <button>+</button>
+            <div>{counterValue}</div>
+            <button onClick={minusClickHandler}>-</button>
+            <button onClick={addClickHandler}>+</button>
             <br />
-            <button>Reset</button>
+            <button onClick={resetClickHandler}>Reset</button>
         </div>
     );
 }
