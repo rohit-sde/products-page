@@ -1,10 +1,12 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
+import App from "./App";
+import "./index.scss";
 
-// const rootEle = document.getElementById("root");
-// const reactRoot = ReactDOM.createRoot(rootEle);
-// reactRoot.render(<React.StrictMode>hi</React.StrictMode>);
+// console.log(React);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
-    <React.StrictMode>hi</React.StrictMode>
+    <React.StrictMode>
+        <App />
+    </React.StrictMode>
 );
